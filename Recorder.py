@@ -4,7 +4,7 @@ import pyaudio
 WAVE_OUTPUT_FILENAME = ''
 def input_request():
     global WAVE_OUTPUT_FILENAME
-    path = 'request.wav'#'audio_file123.wav'#'C:\\Users\\Kryvd\\PycharmProjects\\pythonProject1\\audio_data_X2zqiX6yL3I.mp3'
+    path = 'request.wav'
     CHUNK = 1024
     FORMAT = pyaudio.paInt16
     CHANNELS = 2

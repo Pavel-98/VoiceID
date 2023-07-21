@@ -38,7 +38,7 @@ def match_particullary(word, otherWord):
         if longWord[i] == shortWord[0]:
             j = i
             part_count = 0
-            while i + j < len(shortWord) and longWord[j] == shortWord[j]: # and part_count < len(shortWord):
+            while i + j < len(shortWord) and longWord[j] == shortWord[j]:
                 part_count += 1
                 j += 1
             #global count_of_matched
@@ -81,9 +81,9 @@ def third_level(request, text, path):
         for j in range(0, require_number_of_words - 1):
             text_for_searching = words_of_request[i]#''
             for k in range(i + 1, i + require_number_of_words - j):
-                text_for_searching += ' ' + words_of_request[k]# + ' '
-            for k in range(i + require_number_of_words - j + 1, i + require_number_of_words - j - j + j + (require_number_of_words -(require_number_of_words - j))):#(required_number_of_words - j): #+ (require_number_of_words - (require_number_of_words - j))):# - 1 ):
-                text_for_searching += ' ' + words_of_request[k]#  + ' '
+                text_for_searching += ' ' + words_of_request[k]
+            for k in range(i + require_number_of_words - j + 1, i + require_number_of_words - j - j + j + (require_number_of_words -(require_number_of_words - j))):
+                text_for_searching += ' ' + words_of_request[k]
             if second_level(text_for_searching, text, path, 2, request):
-                return#break
+                return
     return
